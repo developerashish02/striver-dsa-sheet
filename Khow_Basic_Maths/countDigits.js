@@ -1,5 +1,5 @@
 
-
+// count o digits using digit by digit method
 function countDigits(num) {
     if (num === 0) return 1;
 
@@ -8,7 +8,7 @@ function countDigits(num) {
     let count = 0;
 
     while (num !== 0) {
-        num = Math.round(num / 10);
+        num = Math.floor(num / 10);
         count += 1;
     }
 
@@ -16,7 +16,17 @@ function countDigits(num) {
 }
 
 
-const num = -111;
-const result = countDigits(num);
+
+// count o digits using string method
+function countDigits2(num) {
+    return Math.abs(num).toString().length;
+}
+
+
+
+// main function
+const num = -1234;
+// const result = countDigits(num);
+const result = countDigits2(num);
 
 console.log("Count of digits is:-", result); 
